@@ -85,6 +85,8 @@ public class LonelyTwitterActivity extends Activity implements MyObserver {
         oldTweetsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                Intent intent = new Intent(activity, EditTweetActivity.class);
+               intent.putExtra("VIEW_ID",id);
+               intent.putExtra("VIEW_POSITION", position);
                startActivity(intent);
            }
         });
